@@ -256,6 +256,8 @@ JSONEditor.defaults.editors.select = JSONEditor.AbstractEditor.extend({
     // If this editor uses a dynamic select box
     if(this.enumSource) {
       vars = this.getWatchedFieldValues();
+	  vars.currentJsonObj = this.jsoneditor.editors.root.value;
+	  
       var select_options = [];
       var select_titles = [];
 
